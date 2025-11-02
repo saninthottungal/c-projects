@@ -1,0 +1,1 @@
+ fopen(DB_PATH, "a+");
