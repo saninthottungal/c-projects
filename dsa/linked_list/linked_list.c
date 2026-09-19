@@ -21,7 +21,8 @@ int main() {
     switch (choice) {
 
     case 1:
-      insert(head);
+      insert(&head);
+      break;
 
     case 6:
       printf("Thank you!\n");

@@ -6,6 +6,6 @@ struct Node {
   struct Node *next;
 };
 
-void insert(struct Node *head);
+void insert(struct Node **head);
 
 #endif
