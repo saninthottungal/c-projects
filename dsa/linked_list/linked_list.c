@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "linked_list_fs.h"
+
 int main() {
+  struct Node *head = NULL;
+
   printf("\nWelcome to the Linked list program: ");
 
   while (1) {
@@ -15,6 +19,9 @@ int main() {
     printf("\n");
 
     switch (choice) {
+
+    case 1:
+      insert(head);
 
     case 6:
       printf("Thank you!\n");
