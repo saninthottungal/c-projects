@@ -8,13 +8,12 @@ typedef struct {
 
 void printIdAndName(int id, char *name);
 void printDetails(Student student);
+void printUsingPointer(Student *student);
 
 int main() {
   Student student = {12, "sanin", 22};
 
-  printIdAndName(student.id, student.name);
-
-  printDetails(student);
+  printUsingPointer(&student);
 }
 
 // 1. passing structure memeber as argument
@@ -26,4 +25,11 @@ void printIdAndName(int id, char *name) {
 void printDetails(Student student) {
   printf("\nID: %d\nName: %s\nAge: %d\n", student.id, student.name,
          student.age);
+}
+
+// 3. passing pointer to structure as argument
+void printUsingPointer(Student *student) {
+  student->age = 122;
+  printf("\nID: %d\nName: %s\nAge: %d\n", student->id, student->name,
+         student->age);
 }
