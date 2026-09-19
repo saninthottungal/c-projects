@@ -6,6 +6,7 @@ struct Node {
   struct Node *next;
 };
 
-void insert(struct Node **head);
+void insertNode(struct Node **head);
+void deleteNode(struct Node **head);
 
 #endif

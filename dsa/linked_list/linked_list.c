@@ -21,7 +21,11 @@ int main() {
     switch (choice) {
 
     case 1:
-      insert(&head);
+      insertNode(&head);
+      break;
+
+    case 2:
+      deleteNode(&head);
       break;
 
     case 6:
