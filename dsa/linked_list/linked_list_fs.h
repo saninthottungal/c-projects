@@ -10,5 +10,6 @@ void insertNode(struct Node **head);
 void deleteNode(struct Node **head);
 void displayList(struct Node *head);
 void updateNode(struct Node *head);
+void searchNode(struct Node *head);
 
 #endif

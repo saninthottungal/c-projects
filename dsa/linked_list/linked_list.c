@@ -32,6 +32,10 @@ int main() {
       updateNode(head);
       break;
 
+    case 4:
+      searchNode(head);
+      break;
+
     case 5:
       displayList(head);
       break;
