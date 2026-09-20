@@ -76,3 +76,50 @@ void deleteNode(struct Node **head) {
     printf("Element %d Not found!", data);
   }
 }
+
+void displayList(struct Node *head) {
+  if (head == NULL) {
+    printf("List is empty!");
+    return;
+  }
+
+  struct Node *ptr = head;
+
+  while (ptr != NULL) {
+    printf("Data: %d\n", ptr->data);
+    ptr = ptr->next;
+  }
+}
+
+void updateNode(struct Node *head) {
+  if (head == NULL) {
+    printf("List is empty!");
+    return;
+  }
+
+  int oldData, newData;
+  bool hasFoundAny = false;
+
+  printf("Enter the element you want to update: ");
+  scanf("%d", &oldData);
+
+  printf("Enter the element you want to replace with: ");
+  scanf("%d", &newData);
+
+  struct Node *ptr = head;
+
+  while (ptr != NULL) {
+    if (ptr->data == oldData) {
+      ptr->data = newData;
+      hasFoundAny = true;
+    }
+
+    ptr = ptr->next;
+  }
+
+  if (hasFoundAny) {
+    printf("Updated all instances of %d with %d", oldData, newData);
+  } else {
+    printf("Element %d not found!", oldData);
+  }
+}
